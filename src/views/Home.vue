@@ -4,28 +4,28 @@
       <div class='container clearfix'>
         <div class='l_main'>
           <section class="post-list">
-            <div v-for="i in list" :key="i.Id" class='post-wrapper'>
+            <div v-for="i in list" :key="i.id" class='post-wrapper'>
               <article class="post ">
                 <section class="meta">
                   <h2 class="title">
-                    <router-link :to="'/content/' + i.Id">
-                      {{ i.Title }}
+                    <router-link :to="'/content/' + i.id">
+                      {{ i.title }}
                     </router-link>
                   </h2>
                   <time>
-                    {{i.CreateTime}}
+                    {{i.createTime}}
                   </time>
                   <div class='cats'>
-                    <a href="javascript:void(0)">{{i.Submitter}}</a>
+                    <a href="javascript:void(0)">{{i.submitter}}</a>
                   </div>
                 </section>
                 <section class="article typo">
-                  <article v-html="i.bcontent"></article>
+                  <article v-html="i.content"></article>
                   <div class="readmore">
                     <a href="/dotnet/asp.net core???????????/">查看更多</a>
                   </div>
                   <div class="full-width auto-padding tags">
-                    <a href="javascript:void(0);">{{i.Category}}</a>
+                    <a href="javascript:void(0);">{{i.category}}</a>
                   </div>
                 </section>
               </article>

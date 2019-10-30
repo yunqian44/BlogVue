@@ -1,5 +1,5 @@
 // 配置API接口地址
-var root = 'http://apk.neters.club/api'
+var root = 'http://localhost:8081/api'
 // 引用axios
 var axios = require('axios')
 
@@ -43,8 +43,10 @@ function apiAxios (method, url, params, success, failure) {
     url: url,
     data: method === 'POST' || method === 'PUT' ? params : null,
     params: method === 'GET' || method === 'DELETE' ? params : null,
-　　 //headers 是即将被发送的自定义请求头，还记得我们的jwt验证么，可以封装进来，注意!这里如果要添加 headers ，一定要是正确的值
-　　 headers:{"Authorization":"Bearer xxxxxxx"},
+　　//headers 是即将被发送的自定义请求头，还记得我们的jwt验证么，可以封装进来，注意!这里如果要添加 headers ，一定要是正确的值
+　　headers:{
+      "Authorization":"Bearer xxxxxxx"
+    },
     baseURL: root,
     withCredentials: false
   })

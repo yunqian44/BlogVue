@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/about',//路径
     name: 'about',//名称
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')//方式二
+    component: () => import(/* webpackChunkName: "about" */ '../views/Form.vue')//方式二
   }
 ]
 
