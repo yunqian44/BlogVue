@@ -2,8 +2,7 @@ import store from "../store";
 import router from "../router/index";
 
 // 配置API接口地址
-var root1 = "http://192.168.0.160:8300/api";//测试本地，用CORS跨域
-var root2 = "http://123.206.33.109:8081/api/";//测试远程，用CORS跨域
+var root1 = "http://192.168.1.19:8300/api";//测试本地，用CORS跨域
 var root = "/api/";//用proxy实现本地代理跨域（生产环境使用的是nginx）
 // 引用axios
 var axios = require("axios");

@@ -38,7 +38,7 @@ module.exports = {
       proxy: {
         // 配置多个代理
         "/api": {
-          target: "http://192.168.0.160:8300",//这里改成你自己的后端api端口地址，记得每次修改，都需要重新build
+          target: "http://192.168.1.19:7001",//这里改成你自己的后端api端口地址，记得每次修改，都需要重新build
           ws: true,
           changeOrigin: true,
           pathRewrite: {
