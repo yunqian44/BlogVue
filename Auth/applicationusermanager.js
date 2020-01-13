@@ -3,12 +3,12 @@ import { UserManager } from 'oidc-client'
 class ApplicationUserManager extends UserManager {
   constructor () {
     super({
-      authority: 'http://localhost:5002',
+      authority: 'http://localhost:7005',
       client_id: 'blogvuejs',
-      redirect_uri: 'http://localhost:6688/callback',
+      redirect_uri: 'http://localhost:7002/callback',
       response_type: 'id_token token',
       scope: 'openid profile roles blog.core.api',
-      post_logout_redirect_uri: 'http://localhost:6688'
+      post_logout_redirect_uri: 'http://localhost:7002'
     })
   }
 
