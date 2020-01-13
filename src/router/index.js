@@ -7,6 +7,7 @@ import store from "../store";
 import Editor from "../views/Editor";
 import Content from "../views/Content";
 import Home2 from "../views/Home2";
+import LoginCallbackView from "../views/LoginCallbackView";
 
 Vue.use(VueRouter)
 
@@ -40,6 +41,11 @@ const routes = [
     component: Login
   },
   {
+    path: "/callback",
+    name: "LoginCallbackView",
+    component: LoginCallbackView
+  },
+  {
     path: "/Vuex",
     name: "Vuex",
     component: FormVuex
@@ -69,13 +75,13 @@ router.beforeEach((to, from, next) => {
       next();
     } else {
       //这里使用Id4授权认证，用Jwt，请删之，并把下边的跳转login 打开；
-      // applicationUserManager.login();
+      applicationUserManager.login();
 
       //这里使用Jwt登录，如果不用Id4授权认证，这里打开它；
-      next({
-        path: "/login",
-        query: { redirect: to.fullPath } // 将跳转的路由path作为参数，登录成功后跳转到该路由
-      });
+      // next({
+      //   path: "/login",
+      //   query: { redirect: to.fullPath } // 将跳转的路由path作为参数，登录成功后跳转到该路由
+      // });
     }
   } else {
     next();
